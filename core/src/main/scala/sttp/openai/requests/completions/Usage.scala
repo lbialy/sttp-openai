@@ -36,10 +36,10 @@ object Usage {
   *   tokens, these tokens are still counted in the total completion tokens for purposes of billing, output, and context window limits.
   */
 case class CompletionTokensDetails(
-    acceptedPredictionTokens: Int,
-    audioTokens: Int,
-    reasoningTokens: Int,
-    rejectedPredictionTokens: Int
+    acceptedPredictionTokens: Option[Int] = None,
+    audioTokens: Option[Int] = None,
+    reasoningTokens: Option[Int] = None,
+    rejectedPredictionTokens: Option[Int] = None
 )
 
 object CompletionTokensDetails {
